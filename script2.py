@@ -130,7 +130,7 @@ def character_segmentation(plate_image,processed_plate):
 			# Selecting only those which are approximately equal to the apx_height
 			if apx_height-3<=h<=apx_height+3:
 				# Cropping characters from processed_plate
-				curr_num = processed_plate[y:y+h,x:x+w]    # pehle binary tha
+				curr_num = processed_plate[y:y+h,x:x+w]  
 				curr_num = cv2.resize(curr_num, dsize=(30,60))
 				 # Removing blurness from characters
 				_, curr_num = cv2.threshold(curr_num, 220, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
